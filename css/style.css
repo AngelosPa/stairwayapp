@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 16px;
+  --my-rainbow: rgba(116, 3, 3, 0.15);
+}
+
+/* font */
+p {
+  font: italic 1.5rem fantasy;
+  /* word-break: break-all; */
+  text-indent: 10rem;
+  word-spacing: 3rem;
+}
+
+/* direction */
+/*MENUBAR */
+
+.menu {
+  width: 100vw;
+  background-color: var(--my-rainbow);
+  background: linear-gradient(0.25turn, #230041, #ebf8e1, #62033b);
+}
+.menu nav ul {
+  height: 5vh;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+a {
+  font: italic 1.5rem fantasy;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  transition: 3s;
+}
+
+li:hover {
+  transform: scale(1.5);
+  padding: 0.5rem;
+  box-shadow: 3px 3px 3px 3px black;
+  border-radius: 50%;
+  transition: 3s;
+}
+/* END OF MENUBAR */
+.main {
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.main-treppebox {
+  width: 80vw;
+  height: 30vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: left;
+  align-self: flex-start;
+  flex-direction: column;
+  flex-flow: wrap;
+  flex-wrap: nowrap;
+  position: relative;
+  top: 25rem;
+
+  overflow: visible;
+
+  transform: rotate(-60deg);
+}
+
+.big {
+  height: 14rem;
+  width: 7rem;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0.5rem;
+  transform: skew(10deg, 30deg);
+}
+.big div:nth-child(n):hover {
+  background-color: rgba(11, 0, 61, 0.822);
+  -webkit-transition: background-color 1000ms linear-gradient;
+  -ms-transition: background-color 1000ms linear-gradient;
+  transition: background-color 1000ms linear-gradient;
+  box-shadow: -30px 30px 30px 0.1rem rgba(73, 8, 59, 0.589);
+  transform: translate3d(10px, -1rem, -1rem);
+  transition: 1.5s;
+}
+/* A BIG THANKS TO MDN */
+
+div {
+  height: 3rem;
+  width: 3rem;
+  background-color: rgba(85, 21, 60, 0.514);
+
+  margin: 0.2rem;
+}
+
+.gray {
+  width: 70rem;
+  height: 5rem;
+
+  /* position: absolute; */
+  right: -30rem;
+  bottom: -10rem;
+  background-color: lightgray;
+  z-index: -1;
+  transform: rotate(-45deg);
+  border-radius: 10% 0 10% 10%;
+}
+/* positions */
+/* static aka Default*/
+.treppe {
+  width: 10rem;
+  height: 10rem;
+
+  top: 6rem;
+  left: 3rem;
+  background-color: var(--my-orange);
+  z-index: -1;
+  transform: rotate(-45deg);
+  border-radius: 10%;
+}
+/* info box footer*/
+.more-info {
+  width: 50vw;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
