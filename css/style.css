@@ -24,7 +24,27 @@ p {
 }
 body {
   background: linear-gradient(to right, #2c88f1c2 10%, #90d5ec 90%);
+  transition: 3s;
+  transition-delay: 5s;
+  animation-name: sunset;
+  animation-duration: 3s;
+  animation-delay: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  animation-direction: normal;
 }
+/*@keyframes sunset {
+  from {
+    background: linear-gradient(to right, #2c88f1c2 10%, #90d5ec 90%);
+    opacity: 100%;
+  }
+
+  to {
+    background: linear-gradient(to right, #000a14c2 50%, #1c033a 90%);
+
+    opacity: 100%;
+  }
+} */
 .sun {
   display: none;
   width: 3rem;
@@ -54,7 +74,7 @@ body {
     background-color: rgb(243, 202, 21);
     rotate: 90deg;
     box-shadow: 0rem 1rem 8rem 9rem rgb(243, 202, 21);
-    transform: rotate(0deg) translateX(50%) rotate(0deg);
+    transform: rotate(0deg) translateX(60%) rotate(0deg);
   }
   to {
     top: 100px;
