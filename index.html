@@ -7,8 +7,8 @@
     <title>More CSS rules</title>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body>
-    <section class="menu">
+  <body> 
+    <!--   <section class="menu">
       <nav>
         <ul>
           <li><a href="#">IT HAS</a></li>
@@ -16,10 +16,11 @@
           <li><a href="#">MEANING</a></li>
         </ul>
       </nav>
-    </section>
+    </section> -->
+    <div class="sun"></div>
     
     <section class="backround">
-      <div class="berg"></div>
+      <div class="berg" ><section class="clicker">click n wait</section></div>
       <div class="berg"></div>
     
     </section>
@@ -87,6 +88,25 @@
       <h5>Made with ❤️ By Angelo</h5>
       <h6>All copyrights reserved ® <span class="year"></span></h6>
     </footer>
+    <script>
+      let clicked = false;
+      document.querySelector('.clicker').addEventListener("click",()=>{
+      clicked= !clicked;
+          console.log(clicked);
+          if(clicked){
+              document.querySelector('.sun').style.cssText = "display:inline;"
+              document.querySelector('body').style.cssText = "background: linear-gradient(to right, #000a14c2 50%, #1c033a 90%);"
+             
+          } else{
+              document.querySelector('.sun').style.cssText = "display: none;"
+             
+              
+          }
+      })
+  </script>
+
+
+
     <script>
       let year = new Date().getFullYear();
       document.querySelector(".year").innerHTML = year+300 + " AD";

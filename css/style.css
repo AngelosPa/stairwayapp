@@ -7,7 +7,14 @@
   font-size: 16px;
   --my-rainbow: rgba(116, 3, 3, 0.15);
 }
-
+.berg section {
+  position: relative;
+  top: 3rem;
+  rotate: auto;
+  transform: rotate(-11deg);
+  font-weight: bold;
+  font-size: 24px;
+}
 /* font */
 p {
   font: italic 1.5rem fantasy;
@@ -15,9 +22,51 @@ p {
   text-indent: 10rem;
   word-spacing: 2rem;
 }
+body {
+  background: linear-gradient(to right, #2c88f1c2 10%, #90d5ec 90%);
+}
+.sun {
+  display: none;
+  width: 3rem;
+  height: 3rem;
+  font-size: 0.1rem;
+  color: none;
+  position: absolute;
+  animation-name: moveit;
+  animation-delay: 0s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-duration: 3s;
+  animation-direction: normal;
+  animation-play-state: running;
+  animation-fill-mode: forwards;
+  border-radius: 100%;
+  border: 1px black none;
 
+  /* animation: name duration timing-function delay iteration-count direction
+        fill-mode; */
+}
+
+@keyframes moveit {
+  from {
+    top: 50%;
+    left: 0;
+    background-color: rgb(243, 202, 21);
+    rotate: 90deg;
+    box-shadow: 0rem 1rem 8rem 9rem rgb(243, 202, 21);
+    transform: rotate(0deg) translateX(50%) rotate(0deg);
+  }
+  to {
+    top: 100px;
+    left: 70%;
+    rotate: 90deg;
+    background-color: rgb(241, 43, 43);
+    box-shadow: 0rem 1rem 5rem 5rem rgb(241, 43, 43);
+    transform: rotate(360deg) translateX(150px) rotate(-180deg);
+  }
+}
 /* direction */
-/*MENUBAR */
+/*MENUBAR
 
 .menu {
   width: 100vw;
@@ -44,13 +93,12 @@ li:hover {
   box-shadow: 3px 3px 3px 3px black;
   border-radius: 50%;
   transition: 3s;
-}
+}  */
 /* backround */
 .backround {
-  margin-top: 10rem;
+  margin-top: 15rem;
   width: 100vw;
   height: 20vh;
-
   display: flex;
   justify-content: space-between;
 }
