@@ -95,11 +95,11 @@
           console.log(clicked);
           if(clicked){
               document.querySelector('.sun').style.cssText = "display:inline;"
-              document.querySelector('body').style.cssText = "background: linear-gradient(to right, #000a14c2 50%, #1c033a 90%); "
+              document.querySelector('body').style.cssText = "animation-name: sunset; "
               
           } else{
               document.querySelector('.sun').style.cssText = "display: none;"
-              document.querySelector('body').style.cssText = "background: linear-gradient(to right, #2c88f1c2 10%, #90d5ec 90%);" 
+              document.querySelector('body').style.cssText = "animation-name: none; " 
            
           }
       })
