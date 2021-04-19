@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 16px;
+  --my-rainbow: rgba(116, 3, 3, 0.15);
+}
+.berg section {
+  position: relative;
+  top: 3rem;
+  rotate: auto;
+  transform: rotate(-11deg);
+  font-weight: bold;
+  font-size: 24px;
+}
+/* font */
+p {
+  font: italic 1.5rem fantasy;
+  /* word-break: break-all; */
+  text-indent: 10rem;
+  word-spacing: 2rem;
+}
+body {
+  background: linear-gradient(to right, #2c88f1c2 10%, #90d5ec 90%);
+  transition: 3s;
+  transition-delay: 5s;
+  animation-name: none;
+  animation-duration: 4s;
+  animation-delay: 0.1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-direction: normal;
+}
+@keyframes sunset {
+  from {
+    background: linear-gradient(to right, #000a14c2 50%, #1c033a 90%);
+    opacity: 0%;
+  }
+
+  to {
+    background: linear-gradient(to right, #000a14c2 50%, #1c033a 90%);
+
+    opacity: 100%;
+  }
+}
+
+.sun {
+  display: none;
+  width: 3rem;
+  height: 3rem;
+  font-size: 0.1rem;
+  color: none;
+  position: absolute;
+  animation-name: moveit;
+  animation-delay: 0s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-duration: 3s;
+  animation-direction: normal;
+  animation-play-state: running;
+  animation-fill-mode: forwards;
+  border-radius: 100%;
+  border: 1px black none;
+
+  /* animation: name duration timing-function delay iteration-count direction
+          fill-mode; */
+}
+
+@keyframes moveit {
+  from {
+    top: 50%;
+    left: 0;
+    background-color: rgb(243, 202, 21);
+    rotate: 90deg;
+    box-shadow: 0rem 1rem 8rem 9rem rgb(243, 202, 21);
+    transform: rotate(0deg) translateX(60%) rotate(0deg);
+  }
+  to {
+    top: 100px;
+    left: 70%;
+    rotate: 90deg;
+    background-color: rgb(241, 43, 43);
+    box-shadow: 0rem 1rem 5rem 5rem rgb(241, 43, 43);
+    transform: rotate(360deg) translateX(150px) rotate(-180deg);
+  }
+}
+/* direction */
+/*MENUBAR
+  
+  .menu {
+    width: 100vw;
+    background-color: var(--my-rainbow);
+    background: linear-gradient(0.25turn, #230041, #ebf8e1, #62033b);
+  }
+  .menu nav ul {
+    height: 5vh;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  a {
+    font: italic 1.5rem fantasy;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    transition: 3s;
+  }
+  
+  li:hover {
+    transform: scale(1.5);
+    padding: 0.5rem;
+    box-shadow: 3px 3px 3px 3px black;
+    border-radius: 50%;
+    transition: 3s;
+  }  */
+/* backround */
+.backround {
+  margin-top: 15rem;
+  width: 100vw;
+  height: 20vh;
+  display: flex;
+  justify-content: space-between;
+}
+.backround div {
+  height: 20rem;
+  width: 20rem;
+  margin-top: 4rem;
+  border-radius: 40%;
+  transform: rotate(45deg);
+  z-index: 0;
+  background: linear-gradient(135deg, rgb(255, 255, 255), rgb(68, 17, 149));
+}
+.backround div:hover {
+  box-shadow: -1rem -1rem 8rem 2rem rgba(212, 194, 116, 0.842);
+  transition: 1.5s;
+}
+.backround div:nth-child(2) {
+  border-radius: 30%;
+}
+
+/* 
+  .gray {
+    width: 70rem;
+    height: 5rem;
+    position: absolute; 
+    right: -30rem;
+    bottom: -10rem;
+    background-color: lightgray;
+    z-index: -1;
+    transform: rotate(-45deg);
+    border-radius: 10% 0 10% 10%;
+  }
+  */
+/* positions */
+/* static aka Default
+  .orange {
+    width: 10rem;
+    height: 10rem;
+  
+    top: 6rem;
+    left: 3rem;
+    background-color: var(--my-orange);
+    z-index: -1;
+    transform: rotate(-45deg);
+    border-radius: 10%;
+  }
+  */
+
+/* treppe */
+.main {
+  width: 100vw;
+  height: 120vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  position: relative;
+  z-index: 0;
+  background: linear-gradient(0deg, rgb(255, 255, 255), rgb(167, 139, 212));
+  box-shadow: -1rem -3rem 4rem 2rem rgb(167, 139, 212);
+}
+.main-treppebox {
+  width: 80vw;
+  height: 30vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: left;
+  align-self: flex-start;
+  flex-direction: column;
+  flex-flow: wrap;
+  flex-wrap: nowrap;
+  position: absolute;
+  top: 30rem;
+
+  overflow: visible;
+
+  transform: rotate(-60deg);
+}
+
+.big {
+  height: 14rem;
+  width: 7rem;
+  background-color: rgba(68, 17, 149, 0);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0.5rem;
+  transform: skew(10deg, 40deg);
+}
+.big div:nth-child(n):hover {
+  background-color: rgba(78, 6, 57, 0.822);
+  -webkit-transition: background-color 1000ms linear-gradient;
+  -ms-transition: background-color 1000ms linear-gradient;
+  transition: background-color 1000ms linear-gradient;
+  box-shadow: -30px 30px 30px 0.1rem rgba(73, 8, 59, 0.589);
+  transform: translate3d(10px, -1rem, -1rem);
+  border-radius: 100%;
+
+  transition: 1s;
+}
+/* A BIG THANKS TO MDN */
+
+div {
+  height: 3rem;
+  width: 3rem;
+  background-color: rgba(0, 0, 0, 0.671);
+
+  margin: 0.2rem;
+}
+
+/* info box footer*/
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px red dashed;
+}
