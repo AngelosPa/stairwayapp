@@ -1,0 +1,60 @@
+@keyframes sunset {
+  from {
+    background: linear-gradient(to right, #000a14c2 50%, #1c033a 90%);
+    opacity: 0%;
+  }
+
+  to {
+    background: linear-gradient(to right, #000a14c2 50%, #1c033a 90%);
+
+    opacity: 100%;
+  }
+}
+@keyframes moveit {
+  from {
+    top: 50%;
+    left: 0;
+    background-color: rgb(243, 202, 21);
+    rotate: 90deg;
+    box-shadow: 0rem 1rem 8rem 9rem rgb(243, 202, 21);
+    transform: rotate(0deg) translateX(60%) rotate(0deg);
+  }
+  to {
+    top: 100px;
+    left: 70%;
+    rotate: 90deg;
+    background-color: rgb(241, 43, 43);
+    box-shadow: 0rem 1rem 5rem 5rem rgb(241, 43, 43);
+    transform: rotate(360deg) translateX(150px) rotate(-180deg);
+  }
+}
+
+@keyframes hop {
+  20% {
+    transform: (rotate(-10deg) translate(1em, -2em));
+    box-shadow: -0.2em 3em 0 -1em #b78e81;
+  }
+  40% {
+    transform: (rotate(10deg) translate(3em, -4em));
+    box-shadow: -0.2em 3.25em 0 -1.1em #b78e81;
+  }
+  60%,
+  75% {
+    transform: (rotate(0) translate(4em, 0));
+    box-shadow: -0.2em 1em 0 -0.75em #b78e81;
+  }
+}
+
+@keyframes kick {
+  20%,
+  50% {
+    box-shadow: 4em 0.4em 0 -0.35em #3f3334, 0.5em 1.5em 0 white,
+      4em 1.75em 0 -0.3em white, 4em 1.75em 0 -0.3em white,
+      4em 1.9em 0 -0.4em white;
+  }
+  40% {
+    box-shadow: 4em 0.4em 0 -0.35em #3f3334, 0.5em 2em 0 white,
+      4em 1.75em 0 -0.3em white, 4.2em 1.75em 0 -0.2em white,
+      4.4em 1.9em 0 -0.2em white;
+  }
+}

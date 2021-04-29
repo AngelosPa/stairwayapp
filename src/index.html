@@ -8,15 +8,7 @@
     <link rel="stylesheet" href="./styles/main.css" />
   </head>
   <body> 
-    <!--   <section class="menu">
-      <nav>
-        <ul>
-          <li><a href="#">IT HAS</a></li>
-          <li><a href="#">NO</a></li>
-          <li><a href="#">MEANING</a></li>
-        </ul>
-      </nav>
-    </section> -->
+
     <div class="sun"></div>
     
     <section class="backround">
@@ -26,10 +18,11 @@
     </section>
     
    <!-- skala -->
-    
+   <div class="rabbit"></div>
     <section class="main">
+      
       <section class="main-treppebox">
-
+        <!-- <div class="rabbit"></div> -->
         <div class="big">
           <div></div>
           <div></div>
@@ -88,28 +81,7 @@
       <h5>Made with ❤️ By Angelo</h5>
       <h6>All copyrights reserved ® <span class="year"></span></h6>
     </footer>
-    <script>
-      let clicked = false;
-      document.querySelector('.clicker').addEventListener("click",()=>{
-      clicked= !clicked;
-          console.log(clicked);
-          if(clicked){
-              document.querySelector('.sun').style.cssText = "display:inline;"
-              document.querySelector('body').style.cssText = "animation-name: sunset; "
-              
-          } else{
-              document.querySelector('.sun').style.cssText = "display: none;"
-              document.querySelector('body').style.cssText = "animation-name: none; " 
-           
-          }
-      })
-  </script>
 
-
-
-    <script>
-      let year = new Date().getFullYear();
-      document.querySelector(".year").innerHTML = year+300 + " AD";
-    </script>
+     <script src="./index.js"></script>
   </body>
 </html>
