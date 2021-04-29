@@ -167,10 +167,14 @@ footer {
   box-shadow: -0.2em 1em 0 -0.75em #b78e81;
   // ??
   transform: rotate(0deg) translate(-2em, 0);
+
   animation: hop 1s infinite linear;
   z-index: 1;
   .no-flexbox & {
     margin: 10em auto 0;
+  }
+  &_stop {
+    animation-play-state: paused !important;
   }
   //tail, eye, feet
   &:before {
