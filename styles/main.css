@@ -223,6 +223,9 @@ footer {
 .no-flexbox .rabbit {
   margin: 10em auto 0;
 }
+.rabbit_stop {
+  animation-play-state: paused !important;
+}
 .rabbit:before {
   content: "";
   position: absolute;

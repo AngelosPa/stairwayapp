@@ -20,7 +20,7 @@ let vStandPoint = 0;
 
 function hopla() {
   let jump = document.querySelector(".rabbit");
-  console.log(jump.style["-webkit-animation-duration"]) = `0+s`;
+  jump.classList.toggle("rabbit_stop");
 }
 function goRight() {
   hStandPoint += 10;
