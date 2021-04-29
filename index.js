@@ -15,7 +15,7 @@ let year = new Date().getFullYear();
 document.querySelector(".year").innerHTML = year + 300 + " AD";
 
 //for the bunny
-let hStandPoint = 00;
+let hStandPoint = 0;
 
 function goRight() {
   hStandPoint += 10;
@@ -24,6 +24,15 @@ function goRight() {
 function goLeft() {
   hStandPoint -= 10;
   rabbit.style.left = hStandPoint + "px";
+}
+let vStandPoint = 0;
+function goUp() {
+  vStandPoint -= 10;
+  rabbit.style.top = vStandPoint + "px";
+}
+function goDown() {
+  vStandPoint += 10;
+  rabbit.style.top = vStandPoint + "px";
 }
 function move(e) {
   if (e.code == "KeyA") {

@@ -210,6 +210,7 @@ footer {
 .rabbit {
   position: absolute;
   top: 40rem;
+  left: 30rem;
   width: 5em;
   height: 3em;
   background: #ffffff;
