@@ -16,30 +16,68 @@ document.querySelector(".year").innerHTML = year + 300 + " AD";
 
 //for the bunny
 let hStandPoint = 0;
+let vStandPoint = 0;
 
+function hopla() {
+  let jump = document.querySelector(".rabbit");
+  console.log(jump.style["-webkit-animation-duration"]) = `0+s`;
+}
 function goRight() {
   hStandPoint += 10;
   rabbit.style.left = hStandPoint + "px";
+}
+function goupright() {
+  vStandPoint -= 10;
+  hStandPoint += 8;
+  rabbit.style.left = hStandPoint + "px";
+  rabbit.style.top = vStandPoint + "px";
+}
+function godownright() {
+  vStandPoint += 10;
+  hStandPoint += 8;
+  rabbit.style.left = hStandPoint + "px";
+  rabbit.style.top = vStandPoint + "px";
 }
 function goLeft() {
   hStandPoint -= 10;
   rabbit.style.left = hStandPoint + "px";
 }
-let vStandPoint = 0;
-function goUp() {
-  vStandPoint -= 10;
+function godownleft() {
+  vStandPoint += 10;
+  hStandPoint -= 8;
+  rabbit.style.left = hStandPoint + "px";
   rabbit.style.top = vStandPoint + "px";
 }
-function goDown() {
-  vStandPoint += 10;
+function godUpleft() {
+  vStandPoint -= 10;
+  hStandPoint -= 8;
+  rabbit.style.left = hStandPoint + "px";
   rabbit.style.top = vStandPoint + "px";
 }
 function move(e) {
-  if (e.code == "KeyA") {
+  if (e.code == "Enter") {
+    hopla();
+  }
+  //right movement D, E, X
+  if (e.code == "KeyD") {
     goRight();
   }
-  if (e.code == "KeyD") {
+  if (e.code == "KeyE") {
+    goupright();
+  }
+  if (e.code == "KeyX") {
+    godownright();
+  }
+  //left movement
+  if (e.code == "KeyA") {
     goLeft();
+  }
+  if (e.code == "KeyQ") {
+    godUpleft();
+  }
+
+  if (e.code == "KeyZ") {
+    godownleft();
   }
 }
 const rabbit = document.querySelector(".rabbit");
